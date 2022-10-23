@@ -109,6 +109,11 @@
       "key": "x-oca-event.provider",
       "object": "ocaevent",
       "transformer": "VerifyStaticTransformer"
+    },
+    {
+      "key": "x-ibm-finding.finding_type",
+      "object": "finding",
+      "transformer":"finding_type"
     }
   ],
   "time": [
@@ -116,6 +121,17 @@
       "key": "x-oca-event.created",
       "transformer": "EpochToTimestamp",
       "object": "ocaevent"
+    },
+    {
+      
+      "key": "first_observed",
+      "transformer": "EpochToTimestamp",
+      "cybox": false
+    },
+    {
+      "key": "last_observed",
+      "transformer": "EpochToTimestamp",
+      "cybox": false
     }
   ],
   "performedby_username": {
@@ -166,10 +182,6 @@
     "key": "x-oca-event.extensions.x-iam-ext.provider_id",
     "object": "ocaevent"
   },
-  "rule_name": {
-    "object": "ocaevent",
-    "key": "x-oca-event.extensions.x-iam-ext.rule_name"
-  },
   "policy_name": {
     "object": "ocaevent",
     "key": "x-oca-event.extensions.x-iam-ext.policy_name"
@@ -217,5 +229,132 @@
   "add": {
     "key": "x-oca-event.extensions.x-iam-ext.add",
     "object": "ocaevent"
+  },
+"severity":[{
+    "key": "x-ibm-finding.extensions.i-am-ext.severity",
+    "object": "finding"
+  },
+  {
+    "key": "x-ibm-finding.severity",
+    "object": "finding",
+    "transformer":"severityNumericValue"
   }
+],
+"suspicious_ips":{
+  "key":"x-ibm-finding.extensions.i-am-ext.suspicious_ips",
+  "object":"finding"
+},
+"most_significant_data_mfamethod":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_mfamethod",
+  "object":"finding"
+},
+"most_significant_geoip_country_name":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_geoip_country_name",
+  "object":"finding"
+},
+"most_significant_data_grant_type":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_grant_type",
+  "object":"finding"
+},
+"anomalous_suspicious_ips" :{
+  "key":"x-ibm-finding.extensions.i-am-ext.anomalous_suspicious_ips",
+  "object":"finding",
+  "transformer": "FilterIPv4List"
+},
+
+"most_significant_servicename":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_servicename",
+  "object":"finding"
+},
+"anomalous_event_count":{
+  "key":"x-ibm-finding.extensions.i-am-ext.anomalous_event_count",
+  "object":"finding"
+},
+"most_significant_tenantname":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_tenantname",
+  "object":"finding"
+},
+"most_significant_data_sourcetype":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_sourcetype",
+  "object":"finding"
+},
+"most_significant_data_scope":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_scope",
+  "object":"finding"
+},
+"summary":{
+  "key":"x-ibm-finding.summary",
+  "object":"finding"
+},
+
+"xfe_threat_insight":{
+  "key":"x-ibm-finding.extensions.i-am-ext.xfe_threat_insight  ",
+  "object":"finding"
+},
+"event_count" :{
+  "key":"x-ibm-finding.event_count",
+  "object":"finding"
+},
+"start_time" :{
+  "key":"x-ibm-finding.start",
+  "object":"finding",
+  "transformer": "EpochToTimestamp"
+
+},
+"end_time" :{
+  "key":"x-ibm-finding.end",
+  "object":"finding",
+  "transformer": "EpochToTimestamp"
+},
+"rule_id":
+  {
+  "key":"x-ibm-finding.alert_id",
+  "object":"finding"
+},
+"rule_name" :{
+  "key":"x-ibm-finding.name",
+  "object":"finding"
+},
+"most_significant_tenantid":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_tenantid",
+  "object":"finding"
+},
+"most_significant_data_cause":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_cause",
+  "object":"finding"
+},
+"xfe_confirmed_malicious_ips":{
+  "key":"x-ibm-finding.extensions.i-am-ext.xfe_confirmed_malicious_ips",
+  "object":"finding"
+},
+
+"most_significant_data_subtype":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_subtype",
+  "object":"finding"
+},
+
+"most_significant_data_providerid":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_providerid",
+  "object":"finding"
+},
+
+"component":{
+  "key":"x-ibm-finding.extensions.i-am-ext.component",
+  "object":"finding"
+},
+"normal_traffic_volume":{
+  "key":"x-ibm-finding.extensions.i-am-ext.normal_traffic_volumet_data_scope",
+  "object":"finding"
+},
+"compromised_users":{
+  "key":"x-ibm-finding.extensions.i-am-ext.compromised_users",
+  "object":"finding"
+},
+
+"most_significant_data_username":{
+  "key":"x-ibm-finding.extensions.i-am-ext.most_significant_data_username",
+  "object":"finding"
+}
+
+  
 }

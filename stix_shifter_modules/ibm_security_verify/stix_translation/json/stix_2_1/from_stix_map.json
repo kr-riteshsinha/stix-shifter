@@ -142,7 +142,14 @@
       ],
       "extensions.'x-iam-ext'.mdm_customerid": [
         "data.billingid"
+      ],
+      "extensions.'x-iam-ext'.rule_id": [
+        "data.rule_id"
+      ],
+      "extensions.'x-iam-ext'.severity":[
+        "data.severity"
       ]
+     
     }
   }
 }
