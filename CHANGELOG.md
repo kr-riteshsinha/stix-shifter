@@ -14,7 +14,90 @@ We have started this changelogs from version 4.0.0. So, changes on previously re
 ### Dependency update:
 *List the dependecy upgrade or downgrade.*
 
+--------------------------------------
+
+## 4.6.0 (2023-01-24)
+
+### Breaking changes:
+
+### Deprecations:
+
+### Changes:
+
+* Instructions for the usage of custom mappings [#1274](https://github.com/opencybersecurityalliance/stix-shifter/pull/1274)
+* Add log analytics API support to azure sentinel connector [#1214](https://github.com/opencybersecurityalliance/stix-shifter/pull/1214)
+* Update OCSF schema in Athena mappings [#1245](https://github.com/opencybersecurityalliance/stix-shifter/pull/1245)
+* splunk: allow multiple, comma-separated index names in the index option [#1271](https://github.com/opencybersecurityalliance/stix-shifter/pull/1271)
+* Rename azure sentinel to Microsoft Graph Security Connector [#1212](https://github.com/opencybersecurityalliance/stix-shifter/pull/1212)
+* elastic_ecs: add beats dialect [#1208](https://github.com/opencybersecurityalliance/stix-shifter/pull/1208)
+* update script to create sql database [#1228](https://github.com/opencybersecurityalliance/stix-shifter/pull/1228)
+* Test for START STOP timestamp format [#1218](https://github.com/opencybersecurityalliance/stix-shifter/pull/1218)
+* Updated RHACS connector to support self signed certificate authentication [#1174](https://github.com/opencybersecurityalliance/stix-shifter/pull/1174)
+
+### Fixes:
+
+* Mapping updates for Guardium STIX 2.1 [#1102](https://github.com/opencybersecurityalliance/stix-shifter/pull/1102)
+* Add default time range to STIX Bundle connector [#1288](https://github.com/opencybersecurityalliance/stix-shifter/pull/1288)
+* Updated code to handle maximum query length limitation in darktrace.  [#1259](https://github.com/opencybersecurityalliance/stix-shifter/pull/1259)
+* Use raw strings for regex [#1276](https://github.com/opencybersecurityalliance/stix-shifter/pull/1276)
+* Updated changes for the issue #1270 [#1272](https://github.com/opencybersecurityalliance/stix-shifter/pull/1272)
+* change all two lettered property names [#1251](https://github.com/opencybersecurityalliance/stix-shifter/pull/1251)
+* mapping fixes for splunk [#1239](https://github.com/opencybersecurityalliance/stix-shifter/pull/1239)
+* splunk: use like, cidrmatch SPL functions for LIKE, ISSUBSET operators [#1244](https://github.com/opencybersecurityalliance/stix-shifter/pull/1244)
+* Fix supported property exporter to handle from-STIX fields not wrapped in a list [#1236](https://github.com/opencybersecurityalliance/stix-shifter/pull/1236)
+* fix domain_ioc mapping (removal of network_traffic ref) [#1226](https://github.com/opencybersecurityalliance/stix-shifter/pull/1226)
+* Updated cybereason code to fix the issue #1215 [#1224](https://github.com/opencybersecurityalliance/stix-shifter/pull/1224)
+* Darktrace timeout exception handled [#1210](https://github.com/opencybersecurityalliance/stix-shifter/pull/1210)
+* Aws athena ocsf fixes [#1182](https://github.com/opencybersecurityalliance/stix-shifter/pull/1182)
+* elastic_ecs: more fixes for LIKE and MATCHES [#1195](https://github.com/opencybersecurityalliance/stix-shifter/pull/1195)
+
+### Dependency update:
+
+* Bump boto3 from 1.26.41 to 1.26.55 in /stix_shifter [#1293](https://github.com/opencybersecurityalliance/stix-shifter/pull/1293)
+* Bump json-fix from 0.5.0 to 0.5.1 in /stix_shifter [#1196](https://github.com/opencybersecurityalliance/stix-shifter/pull/1196)
+* Bump pyopenssl from 22.1.0 to 23.0.0 in /stix_shifter [#1264](https://github.com/opencybersecurityalliance/stix-shifter/pull/1264)
+* Bump boto3 from 1.26.10 to 1.26.41 in /stix_shifter [#1263](https://github.com/opencybersecurityalliance/stix-shifter/pull/1263)
+
 -------------------------------------
+
+## 4.5.2 (2022-11-21)
+
+### Breaking changes:
+
+### Deprecations:
+
+### Changes:
+
+* AWS Athena, added external id support [#1187](https://github.com/opencybersecurityalliance/stix-shifter/pull/1187)
+* Update aws athena supported attribute [#1184](https://github.com/opencybersecurityalliance/stix-shifter/pull/1184)
+* Update AWS Athena for OCSF schema support [#1178](https://github.com/opencybersecurityalliance/stix-shifter/pull/1178)
+* Upgrade pytests version for dev environment [#1170](https://github.com/opencybersecurityalliance/stix-shifter/pull/1170)
+* ocsf schema support in aws Athena [#1134](https://github.com/opencybersecurityalliance/stix-shifter/pull/1134)
+* Add RHACS and Google Chronicle group params [#1150](https://github.com/opencybersecurityalliance/stix-shifter/pull/1150)
+* return proxy translation error [#1130](https://github.com/opencybersecurityalliance/stix-shifter/pull/1130)
+* Updated the readme mappings for GCP Chronicle [#1146](https://github.com/opencybersecurityalliance/stix-shifter/pull/1146)
+
+### Fixes:
+
+* Updated to support query without milliseconds in darktrace connector [#1199](https://github.com/opencybersecurityalliance/stix-shifter/pull/1199)
+* fix formatting of commit list generated by changelog script [#1200](https://github.com/opencybersecurityalliance/stix-shifter/pull/1200)
+* fixed timestamp issue for start and end filter and mapping correction [#1142](https://github.com/opencybersecurityalliance/stix-shifter/pull/1142)
+* Fixed pagination and meta files delete for aws athena [#1176](https://github.com/opencybersecurityalliance/stix-shifter/pull/1176)
+* gcp chronicle: removed an invalid unittest [#1166](https://github.com/opencybersecurityalliance/stix-shifter/pull/1166)
+* Remove optional word from indices label [#1157](https://github.com/opencybersecurityalliance/stix-shifter/pull/1157)
+* Fixed deployment script with --platform linux/amd64 [#1154](https://github.com/opencybersecurityalliance/stix-shifter/pull/1154)
+* Updated connector.py file for the bug fix #1103 [#1104](https://github.com/opencybersecurityalliance/stix-shifter/pull/1104)
+
+### Dependency update:
+
+* Bump flask from 2.0.3 to 2.2.2 in /stix_shifter [#1072](https://github.com/opencybersecurityalliance/stix-shifter/pull/1072)
+* Bump requests-toolbelt from 0.9.1 to 0.10.1 in /stix_shifter [#1180](https://github.com/opencybersecurityalliance/stix-shifter/pull/1180)
+* Bump jsonmerge from 1.8.0 to 1.9.0 in /stix_shifter [#1194](https://github.com/opencybersecurityalliance/stix-shifter/pull/1194)
+* Bump boto3 from 1.26.5 to 1.26.10 in /stix_shifter [#1193](https://github.com/opencybersecurityalliance/stix-shifter/pull/1193)
+* Bump boto3 from 1.21.21 to 1.26.1 in /stix_shifter [#1175](https://github.com/opencybersecurityalliance/stix-shifter/pull/1175)
+* Bump pyopenssl from 21.0.0 to 22.1.0 in /stix_shifter [#1144](https://github.com/opencybersecurityalliance/stix-shifter/pull/1144)
+
+--------------------------------------
 
 ## 4.4.0 (2022-10-06)
 
@@ -24,23 +107,23 @@ We have started this changelogs from version 4.0.0. So, changes on previously re
 
 ### Changes:
 
-*Add optional group parameter to connector configs [#1094](https://github.com/opencybersecurityalliance/stix-shifter/pull/1094)
-*Adding GCP Chronicle UDI Connector [#1075](https://github.com/opencybersecurityalliance/stix-shifter/pull/1075)
-*Update Secretserver mappings [#1092](https://github.com/opencybersecurityalliance/stix-shifter/pull/1092)
-*Connector template for lab [#1117](https://github.com/opencybersecurityalliance/stix-shifter/pull/1117)
+* Add optional group parameter to connector configs [#1094](https://github.com/opencybersecurityalliance/stix-shifter/pull/1094)
+* Adding GCP Chronicle UDI Connector [#1075](https://github.com/opencybersecurityalliance/stix-shifter/pull/1075)
+* Update Secretserver mappings [#1092](https://github.com/opencybersecurityalliance/stix-shifter/pull/1092)
+* Connector template for lab [#1117](https://github.com/opencybersecurityalliance/stix-shifter/pull/1117)
 
 ### Fixes:
 
-*Get rid of StixObjectIdEncoder [#1124](https://github.com/opencybersecurityalliance/stix-shifter/pull/1124)
-*Fixed IBM Security Verify config file [#1125](https://github.com/opencybersecurityalliance/stix-shifter/pull/1125)
-*edits to coding lab [#1120](https://github.com/opencybersecurityalliance/stix-shifter/pull/1120)
-*Update epoch time to 10 digits for demo data [#1119](https://github.com/opencybersecurityalliance/stix-shifter/pull/1119)
-*update coding lab [#1114](https://github.com/opencybersecurityalliance/stix-shifter/pull/1114)
-*Lab fixes [#1116](https://github.com/opencybersecurityalliance/stix-shifter/pull/1116)
+* Get rid of StixObjectIdEncoder [#1124](https://github.com/opencybersecurityalliance/stix-shifter/pull/1124)
+* Fixed IBM Security Verify config file [#1125](https://github.com/opencybersecurityalliance/stix-shifter/pull/1125)
+* edits to coding lab [#1120](https://github.com/opencybersecurityalliance/stix-shifter/pull/1120)
+* Update epoch time to 10 digits for demo data [#1119](https://github.com/opencybersecurityalliance/stix-shifter/pull/1119)
+* update coding lab [#1114](https://github.com/opencybersecurityalliance/stix-shifter/pull/1114)
+* Lab fixes [#1116](https://github.com/opencybersecurityalliance/stix-shifter/pull/1116)
 
 ### Dependency update:
 
-*Bump colorlog from 6.6.0 to 6.7.0 in /stix_shifter [#1095](https://github.com/opencybersecurityalliance/stix-shifter/pull/1095)
+* Bump colorlog from 6.6.0 to 6.7.0 in /stix_shifter [#1095](https://github.com/opencybersecurityalliance/stix-shifter/pull/1095)
 
 --------------------------------------
 
